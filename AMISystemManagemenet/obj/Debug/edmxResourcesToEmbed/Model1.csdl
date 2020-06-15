@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AMIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Agregator">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="idAgr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="timestamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idDC" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="idDC" />
+    </Key>
+    <Property Name="Devcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idMer" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idDC" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Devices1" Relationship="AMIModel.FK_Devices_Devices" FromRole="Device" ToRole="Device1" />
+    <NavigationProperty Name="Device1" Relationship="AMIModel.FK_Devices_Devices" FromRole="Device1" ToRole="Device" />
+  </EntityType>
+  <EntityContainer Name="AMIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Agregators" EntityType="Self.Agregator" />
+    <EntitySet Name="Devices" EntityType="Self.Device" />
+    <AssociationSet Name="FK_Devices_Devices" Association="AMIModel.FK_Devices_Devices">
+      <End Role="Device" EntitySet="Devices" />
+      <End Role="Device1" EntitySet="Devices" />
+    </AssociationSet>
+    <EntitySet Name="Merenjas" EntityType="AMIModel.Merenja" />
+  </EntityContainer>
+  <Association Name="FK_Devices_Devices">
+    <End Type="AMIModel.Device" Role="Device" Multiplicity="1" />
+    <End Type="AMIModel.Device" Role="Device1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="idDC" />
+      </Principal>
+      <Dependent Role="Device1">
+        <PropertyRef Name="idDC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Merenja">
+    <Key>
+      <PropertyRef Name="idMerenja" />
+    </Key>
+    <Property Name="idMerenja" Type="Int32" Nullable="false" />
+    <Property Name="tip" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vrednost" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Devices>
+  <Device>
+    <DeviceCode>1</DeviceCode>
+    <TimeStamp>1592189144</TimeStamp>
+    <MeasurementType>Struja</MeasurementType>
+    <MeasurementValue>282</MeasurementValue>
+  </Device>
+  <Device>
+    <DeviceCode>1</DeviceCode>
+    <TimeStamp>1592189144</TimeStamp>
+    <MeasurementType>Napon</MeasurementType>
+    <MeasurementValue>66</MeasurementValue>
+  </Device>
+  <Device>
+    <DeviceCode>1</DeviceCode>
+    <TimeStamp>1592189144</TimeStamp>
+    <MeasurementType>Struja</MeasurementType>
+    <MeasurementValue>492</MeasurementValue>
+  </Device>
+</Devices>

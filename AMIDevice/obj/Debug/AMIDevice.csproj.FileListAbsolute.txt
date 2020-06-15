@@ -1,0 +1,19 @@
+H:\D_disk\RES\AMI\AMIDevice\bin\Debug\AMIDevice.exe.config
+H:\D_disk\RES\AMI\AMIDevice\bin\Debug\AMIDevice.exe
+H:\D_disk\RES\AMI\AMIDevice\bin\Debug\AMIDevice.pdb
+H:\D_disk\RES\AMI\AMIDevice\bin\Debug\Shared.dll
+H:\D_disk\RES\AMI\AMIDevice\bin\Debug\Shared.pdb
+H:\D_disk\RES\AMI\AMIDevice\obj\Debug\AMIDevice.csprojAssemblyReference.cache
+H:\D_disk\RES\AMI\AMIDevice\obj\Debug\AMIDevice.csproj.CopyComplete
+H:\D_disk\RES\AMI\AMIDevice\obj\Debug\AMIDevice.exe
+H:\D_disk\RES\AMI\AMIDevice\obj\Debug\AMIDevice.pdb
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIDevice\bin\Debug\AMIDevice.exe.config
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIDevice\bin\Debug\AMIDevice.exe
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIDevice\bin\Debug\AMIDevice.pdb
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIDevice\bin\Debug\Shared.dll
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIDevice\bin\Debug\Shared.pdb
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIDevice\obj\Debug\AMIDevice.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIDevice\obj\Debug\AMIDevice.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIDevice\obj\Debug\AMIDevice.csproj.CopyComplete
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIDevice\obj\Debug\AMIDevice.exe
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIDevice\obj\Debug\AMIDevice.pdb

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AMIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Agregator">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idAgr" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="timestamp" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idDC" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Devices">
+    <Key>
+      <PropertyRef Name="idDC" />
+    </Key>
+    <Property Name="Devcode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="time" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idMer" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="idDC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Merenja">
+    <Key>
+      <PropertyRef Name="idMerenja" />
+    </Key>
+    <Property Name="idMerenja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tip" Type="text" Nullable="false" />
+    <Property Name="vrednost" Type="text" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Devices_Devices">
+    <End Role="Devices" Type="Self.Devices" Multiplicity="1" />
+    <End Role="Devices1" Type="Self.Devices" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Devices">
+        <PropertyRef Name="idDC" />
+      </Principal>
+      <Dependent Role="Devices1">
+        <PropertyRef Name="idDC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AMIModelStoreContainer">
+    <EntitySet Name="Agregator" EntityType="Self.Agregator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Devices" EntityType="Self.Devices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Merenja" EntityType="Self.Merenja" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Devices_Devices" Association="Self.FK_Devices_Devices">
+      <End Role="Devices" EntitySet="Devices" />
+      <End Role="Devices1" EntitySet="Devices" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

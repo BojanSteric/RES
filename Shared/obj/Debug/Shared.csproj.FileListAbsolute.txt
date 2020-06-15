@@ -1,0 +1,11 @@
+H:\D_disk\RES\AMI\Shared\bin\Debug\Shared.dll
+H:\D_disk\RES\AMI\Shared\bin\Debug\Shared.pdb
+H:\D_disk\RES\AMI\Shared\obj\Debug\Shared.csprojAssemblyReference.cache
+H:\D_disk\RES\AMI\Shared\obj\Debug\Shared.dll
+H:\D_disk\RES\AMI\Shared\obj\Debug\Shared.pdb
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\Shared\bin\Debug\Shared.dll
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\Shared\bin\Debug\Shared.pdb
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\Shared\obj\Debug\Shared.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\Shared\obj\Debug\Shared.dll
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\Shared\obj\Debug\Shared.pdb

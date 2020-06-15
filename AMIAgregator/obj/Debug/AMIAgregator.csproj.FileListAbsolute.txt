@@ -1,0 +1,19 @@
+H:\D_disk\RES\AMI\AMIAgregator\bin\Debug\AMIAgregator.exe.config
+H:\D_disk\RES\AMI\AMIAgregator\bin\Debug\AMIAgregator.exe
+H:\D_disk\RES\AMI\AMIAgregator\bin\Debug\AMIAgregator.pdb
+H:\D_disk\RES\AMI\AMIAgregator\bin\Debug\Shared.dll
+H:\D_disk\RES\AMI\AMIAgregator\bin\Debug\Shared.pdb
+H:\D_disk\RES\AMI\AMIAgregator\obj\Debug\AMIAgregator.csprojAssemblyReference.cache
+H:\D_disk\RES\AMI\AMIAgregator\obj\Debug\AMIAgregator.csproj.CopyComplete
+H:\D_disk\RES\AMI\AMIAgregator\obj\Debug\AMIAgregator.exe
+H:\D_disk\RES\AMI\AMIAgregator\obj\Debug\AMIAgregator.pdb
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIAgregator\bin\Debug\AMIAgregator.exe.config
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIAgregator\bin\Debug\AMIAgregator.exe
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIAgregator\bin\Debug\AMIAgregator.pdb
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIAgregator\bin\Debug\Shared.dll
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIAgregator\bin\Debug\Shared.pdb
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIAgregator\obj\Debug\AMIAgregator.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIAgregator\obj\Debug\AMIAgregator.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIAgregator\obj\Debug\AMIAgregator.csproj.CopyComplete
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIAgregator\obj\Debug\AMIAgregator.exe
+C:\Users\PC\Desktop\New folder (2)\RES\AMI\AMIAgregator\obj\Debug\AMIAgregator.pdb

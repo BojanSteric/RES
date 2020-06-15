@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AMIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Agregator">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idAgr" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="timestamp" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="idDC" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Devices">
+          <Key>
+            <PropertyRef Name="idDC" />
+          </Key>
+          <Property Name="Devcode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="time" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="idMer" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="idDC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Merenja">
+          <Key>
+            <PropertyRef Name="idMerenja" />
+          </Key>
+          <Property Name="idMerenja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tip" Type="text" Nullable="false" />
+          <Property Name="vrednost" Type="text" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Devices_Devices">
+          <End Role="Devices" Type="Self.Devices" Multiplicity="1" />
+          <End Role="Devices1" Type="Self.Devices" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Devices">
+              <PropertyRef Name="idDC" />
+            </Principal>
+            <Dependent Role="Devices1">
+              <PropertyRef Name="idDC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AMIModelStoreContainer">
+          <EntitySet Name="Agregator" EntityType="Self.Agregator" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Devices" EntityType="Self.Devices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Merenja" EntityType="Self.Merenja" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Devices_Devices" Association="Self.FK_Devices_Devices">
+            <End Role="Devices" EntitySet="Devices" />
+            <End Role="Devices1" EntitySet="Devices" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AMIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Agregator">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="idAgr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="timestamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idDC" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="idDC" />
+          </Key>
+          <Property Name="Devcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idMer" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idDC" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Devices1" Relationship="AMIModel.FK_Devices_Devices" FromRole="Device" ToRole="Device1" />
+          <NavigationProperty Name="Device1" Relationship="AMIModel.FK_Devices_Devices" FromRole="Device1" ToRole="Device" />
+        </EntityType>
+        <EntityContainer Name="AMIEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Agregators" EntityType="Self.Agregator" />
+          <EntitySet Name="Devices" EntityType="Self.Device" />
+          <AssociationSet Name="FK_Devices_Devices" Association="AMIModel.FK_Devices_Devices">
+            <End Role="Device" EntitySet="Devices" />
+            <End Role="Device1" EntitySet="Devices" />
+          </AssociationSet>
+          <EntitySet Name="Merenjas" EntityType="AMIModel.Merenja" />
+        </EntityContainer>
+        <Association Name="FK_Devices_Devices">
+          <End Type="AMIModel.Device" Role="Device" Multiplicity="1" />
+          <End Type="AMIModel.Device" Role="Device1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="idDC" />
+            </Principal>
+            <Dependent Role="Device1">
+              <PropertyRef Name="idDC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Merenja">
+          <Key>
+            <PropertyRef Name="idMerenja" />
+          </Key>
+          <Property Name="idMerenja" Type="Int32" Nullable="false" />
+          <Property Name="tip" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="vrednost" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AMIModelStoreContainer" CdmEntityContainer="AMIEntities">
+          <EntitySetMapping Name="Agregators">
+            <EntityTypeMapping TypeName="AMIModel.Agregator">
+              <MappingFragment StoreEntitySet="Agregator">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idAgr" ColumnName="idAgr" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="idDC" ColumnName="idDC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Devices">
+            <EntityTypeMapping TypeName="AMIModel.Device">
+              <MappingFragment StoreEntitySet="Devices">
+                <ScalarProperty Name="Devcode" ColumnName="Devcode" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="idMer" ColumnName="idMer" />
+                <ScalarProperty Name="idDC" ColumnName="idDC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Merenjas">
+            <EntityTypeMapping TypeName="AMIModel.Merenja">
+              <MappingFragment StoreEntitySet="Merenja">
+                <ScalarProperty Name="vrednost" ColumnName="vrednost" />
+                <ScalarProperty Name="tip" ColumnName="tip" />
+                <ScalarProperty Name="idMerenja" ColumnName="idMerenja" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

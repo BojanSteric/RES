@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AMIModelStoreContainer" CdmEntityContainer="AMIEntities">
+    <EntitySetMapping Name="Agregators">
+      <EntityTypeMapping TypeName="AMIModel.Agregator">
+        <MappingFragment StoreEntitySet="Agregator">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idAgr" ColumnName="idAgr" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="idDC" ColumnName="idDC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Devices">
+      <EntityTypeMapping TypeName="AMIModel.Device">
+        <MappingFragment StoreEntitySet="Devices">
+          <ScalarProperty Name="Devcode" ColumnName="Devcode" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="idMer" ColumnName="idMer" />
+          <ScalarProperty Name="idDC" ColumnName="idDC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Merenjas">
+      <EntityTypeMapping TypeName="AMIModel.Merenja">
+        <MappingFragment StoreEntitySet="Merenja">
+          <ScalarProperty Name="vrednost" ColumnName="vrednost" />
+          <ScalarProperty Name="tip" ColumnName="tip" />
+          <ScalarProperty Name="idMerenja" ColumnName="idMerenja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
